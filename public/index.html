@@ -42,10 +42,11 @@ a       { color: #77c; text-decoration: none; }
 a:hover { color: #33c; text-decoration: underline; }
 
 /* logo & slogan in CSS */
-#logo h1 { color: #000; padding: 0; margin: 0; } /* early */
+#logo h1 { color: #000; padding: 0; margin: 0; text-align: center;} /* early */
 #logo h1 b { color: #600; padding-left: 0.1ch; } /* orbit */
-#logo p { color: #666; font-weight: bold; margin-top: 0.4em; } /* slogan */
+#logo p { color: #666; font-weight: 700; margin-top: 0.4em; text-align: center; padding-top: 0px; margin-top: 0px; padding-bottom: 5em; text-transform: uppercase;} /* slogan */
 
+footer { font-weight: bold; margin-top: 2em;}
 footer ul { list-style: none; padding-left: 0; margin: 0.2em 0; }
 footer li { margin: 0.2em 0; }
 
@@ -72,14 +73,15 @@ body {
   }
   body { min-width: 35em; max-width: 60em; } /* 35-60em total width */
   #mission { float: left; width: 45%; }
-  #team { float: right; width: 45%; }
+  #team { float: right; width: 45%; font-size: 80%; margin-top: 2em;}
   footer { clear: both; }
 }
 </style>
 <body>
     <header id="logo">
-      <h1><!-- img src='logo-temp.png' alt="early orbit logo" width='50%' -->
-        early<b>orbit</b></h1>
+      <h1>
+        <img src='logo-temp.png' alt="early orbit logo" width='50%'>
+      </h1>
       <p>apps on a mission</p>
     </header>
     <section id="mission">
@@ -102,7 +104,7 @@ body {
       </p>
   </section>
  	<section id="team">
-    <!--img src="asdfjlk" /-->
+    <!--img src="asdfjlk" alt="Bjorn and Mike monochrome photo" width="100%" height="100%" -->
     <figcaption>
      Early Orbit's core team is
      <a href="https://www.linkedin.com/in/beorn/">Bj&oslash;rn Stabell</a> and
