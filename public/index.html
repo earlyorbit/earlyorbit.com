@@ -4,61 +4,121 @@
 <style>
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed&display=swap');
-
-body {
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18pt;
-  font-weight: 100;
-  line-height: 1.2em;
-  color: #c90;
-  width: 42%;
-}
-h1,h2 {
-  text-shadow: 
+@import url('https://fonts.googleapis.com/css?family=Abel|Oxygen|Poppins|Raleway|Roboto+Condensed|Solway|Source+Sans+Pro&display=swap');
+/* experiments
+font-family: 'Oxygen', sans-serif;
+font-family: 'Solway', serif;
+font-family: 'Abel', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Poppins', sans-serif; */
+/* h1,h2 {
+ text-shadow: 
     -1px -1px 0 #f00,
     0 2px 1px #0f0,
     1px 3px 0 #00f;
+} */
+/* p { max-width: 33em; } */
+
+/* define root em (rem) so it's easy to work with:
+   default font-size is usually 16px = 100%
+   so at 62.5%, 1.4rem = 14px
+   then we set body to 160% */
+html { font-size: 62.5%; }
+body { font-size: 160%; }
+
+body {
+  font-family: sans-serif; /* 'Solway', 'Fira Sans Condensed', sans-serif; */
+  line-height: 1.15em;
+  color: #333;
 }
+
+/* link styling */
+a       { color: #77c; text-decoration: none; }
+a:hover { color: #33c; text-decoration: underline; }
+
+/* logo & slogan in CSS */
+#logo h1 { color: #000; padding: 0; margin: 0; } /* early */
+#logo h1 b { color: #600; padding-left: 0.1ch; } /* orbit */
+#logo p { color: #666; font-weight: bold; margin-top: 0.4em; } /* slogan */
+
+footer ul { list-style: none; padding-left: 0; margin: 0.2em 0; }
+footer li { margin: 0.2em 0; }
+
+/* bg gradient */
 body {
   background: linear-gradient(-34.5deg,
-    #2484C6 20%, #0A4B7C 40%, #ccb 30%, #dee 90%);
+    #ccb 20%, #eed 40%, #ddc 30%, #eee 90%);
   margin: 0;
   background-attachment: fixed;
 }
-body {
-  right: 50%;
-  bottom: 50%;
-  transform: translate(20%,20%);
-  position: absolute;
-}
-p {
-	font-size: 80%;
-	color: #446;
-}
-blockquote {
-  font-family: 'Fira Sans Extra Condensed', sans-serif;
-	color: #333;
-	margin-left: 0;
-	font-style: oblique;
 
+/* small screens: single column text */
+body {
+  margin: 1em 2em;
+}
+/* big screens: center text and use two columns */
+@media screen and (min-width: 660px)
+{
+  body { /* center body */
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%,50%);
+    position: absolute;
+  }
+  body { min-width: 35em; max-width: 60em; } /* 35-60em total width */
+  #mission { float: left; width: 45%; }
+  #team { float: right; width: 45%; }
+  footer { clear: both; }
 }
 </style>
 <body>
-  <div>
-    <img src='logo-temp.png' alt="early orbit logo" width='50%'><img>
-    <!--
-      <h2>a startup studio</h2>
-    -->
-      <blockquote>identifying startup vectors
-      	for a digital native world</blockquote>
-  </div>
-  <div>
-  	<p>
-  		Early Orbit's core team is <a href="https://www.linkedin.com/in/beorn/">Bj&oslash;rn Stabell</a> and <a href="https://www.linkedin.com/in/mwelch/">Michael Welch</a>, who together founded the startup studio Exoweb Labs, where they dreamt up and launched the mobile gaming company <a href="https://www.crunchbase.com/organization/happylatte">Happylatte</a> ($8.5M raised from Index Ventures) whose games reached top download and grossing spots and app store  market intelligence leader, <a href="https://www.crunchbase.com/organization/app-annie">App Annie</a> ($157M raised from IDG, Sequoia, IVP, Greycroft, Infinity).
-  	</p>
-  	<p>
-  		Identifying startup opportunities requires keeping the pulse of technological and societal change and keeping human needs first and foremost. Changes map to vectors that help identify future patterns, and these patterns help identify opportunities. We believe there are currently several opportunities for breaking old habits and rethinking tools for a native digital world.
-  	</p>
-  </div>
+    <header id="logo">
+      <h1><!-- img src='logo-temp.png' alt="early orbit logo" width='50%' -->
+        early<b>orbit</b></h1>
+      <p>apps on a mission</p>
+    </header>
+    <section id="mission">
+      <p>
+        Early Orbit is a startup studio with a broad mandate
+        to dream up and launch massively valuable apps and businesses
+        that unleash human super-intelligence through
+        modern knowledge tools.
+      </p>
+      <p>
+        Most of of the work we do as humans can be considered
+        knowledge work, but the tools we have for such work is
+        still stuck in the stone age.  We believe there's
+        huge potential for modern digital tools that better fit
+        our human nature, that better optimize for human
+        effectiveness vs computer effectiveness, that enable us
+        to consolidate and regain control over all of our
+        digital life, that super-charge knowledge workers whilst
+        being frictionless and a joy to use.
+      </p>
+  </section>
+ 	<section id="team">
+    <img src="asdfjlk" />
+    <figcaption>
+     Early Orbit's core team is
+     <a href="https://www.linkedin.com/in/beorn/">Bj&oslash;rn Stabell</a> and
+     <a href="https://www.linkedin.com/in/mwelch/">Michael Welch</a>,
+     who together founded the startup studio Exoweb Labs, where they
+     dreamt up and launched the mobile gaming company
+     <a href="https://www.crunchbase.com/organization/happylatte">Happylatte</a>
+     ($8.5M raised from Index Ventures) whose games reached
+     top download and grossing spots and app store  market intelligence leader,
+     <a href="https://www.crunchbase.com/organization/app-annie">App Annie</a>
+     ($157M raised from IDG, Sequoia, IVP, Greycroft, Infinity).
+    </figcaption>
+   </section>
+   <footer>
+     Get in touch:
+     <ul>
+       <li><a href="mailto:work@earlyorbit.com">work@earlyorbit.com</a>
+       <li><a href="mailto:hello@earlyorbit.com">hello@earlyorbit.com</a>
+     </ul>
+   </footer>
 </body>
 </html>
