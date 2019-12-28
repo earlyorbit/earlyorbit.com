@@ -59,7 +59,7 @@ footer { padding-bottom: 2em; }
 p { margin-top: 0; }
 
 /* small screens: single column text */
-body { margin: 2em; }
+body { margin: 2em 0.5em; }
 
 /* big screens: center text and use two columns */
 @media screen and (min-width: 900px) and (min-height: 600px)
@@ -67,8 +67,8 @@ body { margin: 2em; }
   body {
     margin: auto;
     margin-top: 5em;
-    /* 35-60em total width */
-    min-width: 35em; max-width: 60em;
+    margin-bottom: 2em;
+    min-width: 35em; max-width: 60em; /* 35-60em total width */
   }
   #logo { margin-bottom: 4em; }
   /* two columns */
