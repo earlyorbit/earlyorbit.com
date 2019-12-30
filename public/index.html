@@ -35,6 +35,10 @@ body {
 a       { color: #adc; text-decoration: none; }
 a:hover { color: #afd; text-decoration: underline; }
 
+/* footer items */
+footer ul { list-style: none; padding-left: 0; margin: 0.2em 0; }
+footer li { margin: 0.4em 0; }
+
 /* logo & slogan in CSS */
 #logo { margin: auto; }
 #logo img { width: 170px; }
@@ -44,41 +48,35 @@ a:hover { color: #afd; text-decoration: underline; }
   color: #ddd; font-weight: 700; text-transform: uppercase; text-align: center;
   margin-top: 0.3em;
 }
-#logo { margin-bottom: 2em; }
-
-footer ul { list-style: none; padding-left: 0; margin: 0.2em 0; }
-footer li { margin: 0.4em 0; }
-
-/* padding */
-#team, #mission, footer {
+section, footer {
   background-color: #0005; /* black bg, some alpha */
-  padding: 1em 2em;
 }
-#mission { padding-top: 2em; }
-footer { padding-bottom: 2em; }
-p { margin-top: 0; }
 
-/* small screens: single column text */
-body { margin: 2em 0.5em; }
+/*
+ * layout
+ */
+#logo { margin: 2em; }
+section, footer {
+  padding: 1rem 2rem;
+}
+body {
+	max-width: 900px;
+	margin: 0 auto;
+}
 
-/* big screens: center text and use two columns */
-@media screen and (min-width: 900px) and (min-height: 600px)
+@media screen and (min-width: 800px) and (min-height: 600px)
 {
   body {
-    margin: auto;
-    margin-top: 5em;
-    margin-bottom: 2em;
-    min-width: 35em; max-width: 60em; /* 35-60em total width */
+    display: grid;
+    grid-gap: 0 2rem;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    align-items: start;
   }
-  #logo { margin-bottom: 4em; }
-  /* two columns */
-  #team { padding-top: 2em; } /* tweak padding to match left column */
-  #mission, #team, footer { width: 42%; }
-  #mission, footer { float: left; }
-  #team { float: right; }
-  footer { clear: both; }
+  footer { grid-column: 1; }
+  header { grid-column: 1 / span 2; }
 }
-</style>
+ </style>
+
 <body>
     <header id="logo">
       <h1>
@@ -120,7 +118,7 @@ body { margin: 2em 0.5em; }
     </p>
    </section>
    <footer>
-     Get in touch:
+     <p>Get in touch:</p>
      <ul>
        <li><a href="mailto:work@earlyorbit.com">work@earlyorbit.com</a>
        <li><a href="mailto:hello@earlyorbit.com">hello@earlyorbit.com</a>
