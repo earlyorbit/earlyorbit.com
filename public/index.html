@@ -2,11 +2,9 @@
 <html>
 <head>
   <title>earlyorbit - apps on a mission - startup studio</title>
-  <!-- <meta name="viewport" content="width=device-width"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <style>
-
 @import url('https://fonts.googleapis.com/css?family=Fira+Code:500&display=swap');
 
 /* define root em (rem) so it's easy to work with:
@@ -15,6 +13,8 @@
    then we set body to 160% */
 html { font-size: 62.5%; }
 body { font-size: 160%; }
+/* this plus initial-scale=1 is to prevent safari from changing font size in landscape orientation */
+body { -webkit-text-size-adjust: 100%; }
 
 html {
   background: url(naturalbridgeandnightsky-smaller.jpg) no-repeat center center fixed; 
@@ -30,6 +30,7 @@ body {
   font-family: 'Fira Code', 'Courier New', 'Courier', monospace, sans-serif;
   font-weight: bold;
   line-height: 1.35em;
+
 }
 
 /* link styling */
@@ -54,29 +55,22 @@ section, footer {
 }
 
 /*
- * layout
+ * repsonsive CSS grid layout (no media queries)
  */
-#logo { margin: 2em; }
-section, footer {
-  padding: 1rem 2rem;
-}
 body {
 	max-width: 900px;
 	margin: 0 auto;
-  -webkit-text-size-adjust: 100%; /* prevent safari from changing font size in landscape orientation */
+  display: grid;
+  grid-gap: 0 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-items: start;
+  justify-content: center;
 }
-
-@media screen and (min-width: 800px) and (min-height: 600px)
-{
-  body {
-    display: grid;
-    grid-gap: 0 2rem;
-    grid-template-columns: repeat(auto-fit, 1fr);
-    align-items: start;
-  }
-  footer { grid-column: 1; }
-  header { grid-column: 1 / span 2; }
-}
+footer { grid-column: 1; } /* always on first */
+header { grid-column: 1/-1; } /* span all columns */
+/* padding */
+#logo { margin: 2em; }
+body > * { padding: 1rem 2rem; }
  </style>
 
 <body>
