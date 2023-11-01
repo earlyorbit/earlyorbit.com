@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+  <title>earlyorbit - apps on a mission - startup studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Fira+Code:500&display=swap');
+
+/* define root em (rem) so it's easy to work with:
+   default font-size is usually 16px = 100%
+   so at 62.5%, 1.4rem = 14px
+   then we set body to 160% */
+html { font-size: 62.5%; }
+body { font-size: 160%; }
+/* this plus initial-scale=1 is to prevent safari from changing font size in landscape orientation */
+body { -webkit-text-size-adjust: 100%; }
+
+html {
+  background: url(naturalbridgeandnightsky-smaller.jpg) no-repeat center center fixed; 
+  background-color: #124; /* fallback bg color */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  color: #eee;
+  font-family: 'Fira Code', 'Courier New', 'Courier', monospace, sans-serif;
+  font-weight: bold;
+  line-height: 1.35em;
+
+}
+
+/* link styling */
+a       { color: #adc; text-decoration: none; }
+a:hover { color: #afd; text-decoration: underline; }
+
+/* footer items */
+footer ul { list-style: none; padding-left: 0; margin: 0.2em 0; }
+footer li { margin: 0.4em 0; }
+
+/* logo & slogan in CSS */
+#logo { margin: auto; }
+#logo img { width: 170px; }
+#logo h1 { text-align: center; margin: 0; } /* early orbit */
+#logo p { /* slogan */
+  font-size: 1.8rem;
+  color: #ddd; font-weight: 700; text-transform: uppercase; text-align: center;
+  margin-top: 0.3em;
+}
+section, footer {
+  background-color: #0005; /* black bg, some alpha */
+}
+
+/*
+ * repsonsive CSS grid layout (no media queries)
+ */
+body {
+	max-width: 1000px;
+	margin: 0 auto;
+  display: grid;
+  grid-gap: 0 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  align-items: start;
+  justify-content: center;
+}
+footer { grid-column: 1; } /* always on first */
+header { grid-column: 1/-1; } /* span all columns */
+/* padding */
+#logo { margin: 2em; }
+body > * { padding: 1rem 2rem; }
+ </style>
+
+<body>
+    <header id="logo">
+      <h1>
+        <img src='earlyorbit_logo.svg' alt="Early Orbit">
+      </h1>
+      <p>apps on a mission</p>
+    </header>
+    <section id="mission">
+      <p>
+        Early Orbit is a startup studio with a broad mandate to
+        dream up and launch massively valuable apps and businesses
+        that unleash human super-intelligence through
+        modern knowledge tools.
+      </p>
+      <p>
+        Most of the work we do as humans can be considered
+        knowledge work, but the tools we have for such work is
+        still stuck in the stone age.  We believe there's
+        huge potential for modern digital tools that better fit
+        our human nature, that better optimize for human
+        effectiveness vs computer effectiveness, that enable us
+        to consolidate and regain control over all of our
+        digital life, that super-charge knowledge workers whilst
+        being frictionless and a joy to use.
+      </p>
+  </section>
+  <section id="team">
+    <p>
+     Early Orbit's core team is
+     <a href="https://www.linkedin.com/in/beorn/">Bj&oslash;rn Stabell</a> and
+     <a href="https://www.linkedin.com/in/mwelch/">Michael Welch</a>,
+     who together founded the startup studio Exoweb Labs, where they
+     dreamt up and launched the mobile gaming company
+     <a href="https://www.crunchbase.com/organization/happylatte">Happylatte</a>
+     ($8.5M raised from Index Ventures) whose games reached
+     top download and grossing spots and app store  market intelligence leader,
+     <a href="https://www.crunchbase.com/organization/app-annie">App Annie</a>
+     ($157M raised from IDG, Sequoia, IVP, Greycroft, Infinity).
+    </p>
+   </section>
+   <footer>
+     <p>Get in touch:</p>
+     <ul>
+       <li><a href="mailto:work@earlyorbit.com">work@earlyorbit.com</a>
+       <li><a href="mailto:hello@earlyorbit.com">hello@earlyorbit.com</a>
+     </ul>
+   </footer>
+</body>
+</html>
